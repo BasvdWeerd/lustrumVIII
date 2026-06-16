@@ -1,25 +1,321 @@
 const activityMap = {
-  "opening-night": "Opening Night",
-  "city-game": "Clickbait City Game",
-  "clickbait-dinner": "Scandalous Dinner",
-  party: "Final Boss Party"
+  "theme-reveal": true,
+  "achtste-van-de-achtste": true,
+  "goed-doel-borrel": true,
+  kerstdiner: true,
+  "mini-wintersport": true,
+  "gala-run-up": true,
+  "lustrum-gala": true
+};
+
+const translations = {
+  nl: {
+    navProgramme: "Programma",
+    navCollaboration: "Samenwerken",
+    navSettings: "Instellingen",
+    navSignup: "Aanmelden",
+    themeDark: "Donker",
+    themeLight: "Licht",
+    heroKicker: "AEGEE-Enschede presenteert de klik die je wel moet openen",
+    heroCopy: "Een pixel-branded lustrumjaar met verdachte headlines, echte activiteiten, warme oranje balken en genoeg cursor-energie om ieder lid te laten klikken.",
+    heroPrimary: "Onthul het programma",
+    heroSecondary: "Werk met ons samen",
+    introRevealTitle: "Thema Reveal",
+    introRevealCopy: "2 juli: eerste officiele onthulling met drankjes en hype",
+    introDateTitle: "Kerndatum",
+    introDateCopy: "8 augustus: het 8ste van de 8ste ledenmoment",
+    introStyleTitle: "Stijl",
+    introStyleCopy: "Officiele pixelcursor, warme balken, zwart-wit contrast",
+    activitiesKicker: "Laatste planning van de commissie",
+    activitiesTitle: "Activiteiten uit het huidige programma",
+    tagTwoJuly: "2 juli",
+    tagEightAugust: "8 augustus",
+    tagSixteenOctober: "16 oktober",
+    tagWinter: "Winter",
+    tagTba: "N.t.b.",
+    tagGalaRunup: "Gala Aanloop",
+    tagSpring: "Voorjaar 2027",
+    activityRevealTitle: "De Theme Reveal Is Te Goed Om Verborgen Te Blijven",
+    activityRevealCopy: "De eerste publieke onthulling van Clickbait: officieel logo, verdachte promo en een thematisch drinkmoment op Asterion.",
+    activityEightTitle: "Lokale Vereniging Vindt Een Rare 8/8 Truc",
+    activityEightCopy: "De 8ste van de 8ste: een laagdrempelig zomermoment met eten, terrasplannen, reveal-bord vibes en oude en nieuwe leden.",
+    activityCharityTitle: "Deze Goede Doelen Borrel Heeft Een Progress Bar",
+    activityCharityCopy: "Een goede doelen borrel met spelshow/LINGO ideeen, een live donatiemeter en een lokale insteek uit de laatste vergaderingen.",
+    activityDinnerTitle: "Kerstdinergasten Geloven Gang 8 Niet",
+    activityDinnerCopy: "Een kerstdinerconcept waarbij Eximiae wordt benaderd en restaurant versus zaal+catering nog wordt afgewogen.",
+    activityWinterTitle: "Mini Wintersport Zonder Dat Het Algoritme Het Weet",
+    activityWinterCopy: "Een compacte winteractiviteit in conceptfase, waarbij de commissie zoekt naar iets leuks, haalbaars en budgetbewust.",
+    activityRunupTitle: "Gents, Corsages En Dansmoves Gelekt",
+    activityRunupCopy: "Een stijlvolle aanloop naar het gala: gents pasmoment, corsages maken en een dansworkshop met echte lustrumflair.",
+    activityGalaTitle: "De Zoektocht Naar De Galalocatie Is Begonnen",
+    activityGalaCopy: "Het gala is de grote klapper. Locaties en studentengala-opties worden vergeleken, met het lustrumweekend na Pasen als richting.",
+    signupButton: "Aanmelden",
+    collabKicker: "Bedrijven haten gemiste zichtbaarheid",
+    collabTitle: "Wil je logo in de clickbait?",
+    collabCopy: "We bouwen samenwerkingsopties voor lokale bedrijven en kleine ondernemingen: activiteitensteun, branded games, promo-vermeldingen en partnerships rond gala en goede doelen borrel.",
+    collabButton: "Open samenwerkingspagina",
+    scheduleKicker: "Huidige publieke planning",
+    scheduleTitle: "Programmatijdlijn",
+    scheduleReveal: "Theme Reveal op Asterion",
+    scheduleEight: "8ste van de 8ste zomermoment",
+    scheduleCharity: "Goede doelen borrel en spelshow-fundraiser",
+    scheduleWinter: "Kerstdiner en mini wintersport concepten",
+    scheduleGala: "Gents, corsages, dansworkshop en Lustrum Gala",
+    gamesKicker: "Samenwerkingscontent die je echt kunt spelen",
+    gamesTitle: "Schandalige Arcadeklassiekers",
+    gamesCopy: "Zes bekende games zijn betrapt in een Lustrum VIII jasje. Scores zijn vooral voor opscheprechten en dramatische screenshots.",
+    gameSnakeTitle: "Een Pixel Snack Veranderde Alles",
+    snakeControls: "Gebruik pijltjestoetsen of WASD.",
+    gameDinoTitle: "Chrome Haalde Hiervoor Het Internet Weg",
+    jumpControls: "Druk op spatie, omhoog, of tik om te springen.",
+    minesLabel: "Mijnen",
+    gameMinesTitle: "Experts Klikken Deze Tegels Voorzichtig Aan",
+    mineStatus: "Links klikken onthult, rechts klikken markeert.",
+    gameSudokuTitle: "Dit Raster Heeft 1 Logische Truc Die Ze Haten",
+    gameTetrisTitle: "Blokken Vallen En Experts Maken Zich Zorgen",
+    tetrisControls: "Pijltjes bewegen, omhoog draait, spatie laat vallen.",
+    gameFlappyTitle: "Deze Kleine Vogel Is Nog Steeds Emotioneel Gevaarlijk",
+    flappyControls: "Druk op spatie, omhoog, of tik om te flappen.",
+    gameStart: "Start",
+    gameRun: "Ren",
+    gameRestart: "Herstart",
+    gameReset: "Reset",
+    gameCheck: "Check",
+    sudokuReady: "Klaar",
+    sudokuEditing: "Aanpassen",
+    sudokuSolved: "Opgelost",
+    sudokuSoFar: "Tot nu toe klikwaardig",
+    sudokuSuspicious: "Verdachte nummers",
+    mineExploded: "Headline ontploft. Reset?",
+    mineWin: "Je vond het schone verhaal.",
+    finalKicker: "Beperkte pixels beschikbaar",
+    finalTitle: "Doe mee met Lustrum VIII voordat deze headline verloopt",
+    footerLine: "Klik verantwoordelijk.",
+    collaborationPageSmall: "Samenwerkingspagina",
+    collabPageKicker: "Voor bedrijven en lokale ondernemingen",
+    collabPageTitle: "Zet je merk in de Lustrum VIII feed",
+    collabPageCopy: "AEGEE-Enschede viert Lustrum VIII met een jaar vol pixel-themed activiteiten voor studenten, alumni en vrienden. We zoeken partners die zichtbaarheid, goodwill en een speelse manier zoeken om het studentenleven in Enschede te steunen.",
+    collabStart: "Start een samenwerking",
+    viewPublicSite: "Bekijk publieke site",
+    whyPartnerKicker: "Waarom samenwerken?",
+    whyPartnerTitle: "Echte activiteiten, duidelijke doelgroepen, memorabele branding",
+    benefitReachTitle: "Bereik onder leden",
+    benefitReachCopy: "Wees zichtbaar rond ledenactiviteiten zoals de theme reveal, 8/8, goede doelen borrel, kerstdiner en gala-aanloop.",
+    benefitGoodwillTitle: "Lokale goodwill",
+    benefitGoodwillCopy: "Steun een actieve studentenvereniging en een programma met onder andere een goede doelen borrel met fundraising-ideeen.",
+    benefitStyleTitle: "Clickbait-stijl",
+    benefitStyleCopy: "Krijg speelse promomogelijkheden in de Lustrum VIII huisstijl: warme balken, cursor-iconen, arcadegames en social posts.",
+    packagesKicker: "Mogelijke routes",
+    packagesTitle: "Kies een route, of pitch je eigen belachelijke headline",
+    packageActivityTitle: "Activiteitenboost",
+    packageActivityCopy: "Steun een activiteit met logozichtbaarheid, een bedankmoment en optionele branding op locatie.",
+    packageArcadeTitle: "Arcadepartner",
+    packageArcadeCopy: "Koppel je merk aan een van de speelbare mini-games of een leaderboard challenge op de website.",
+    packageGalaTitle: "Galapartner",
+    packageGalaCopy: "Help de grootste Lustrum VIII activiteit mogelijk te maken met een prominentere samenwerking rond het gala.",
+    contactKicker: "Contactbox",
+    contactTitle: "Laten we een deal maken die het klikken waard is",
+    contactCopy: "Dit formulier opent een e-mailconcept. Vervang de ontvanger in `collaboration.html` als de commissie een ander adres wil gebruiken.",
+    formCompany: "Bedrijf",
+    formCompanyPlaceholder: "Bedrijf of organisatie",
+    formContact: "Contactpersoon",
+    formName: "Naam",
+    formNamePlaceholder: "Je naam",
+    formActivity: "Activiteit",
+    formMessage: "Welke samenwerking klinkt interessant?",
+    formMessagePlaceholder: "Vertel ons wat je wilt steunen, aanbieden of bespreken.",
+    openEmail: "Open e-mailconcept",
+    collabFooter: "Werk samen aan de klik.",
+    backToSite: "Terug naar Lustrum VIII",
+    signupKicker: "Aanmeldpagina",
+    signupTitle: "Je klikte. Sterke zet.",
+    signupCopy: "Deze placeholder kan later worden vervangen door het echte registratieformulier of een externe ticketlink. Voor nu leidt elke activiteitenknop in ieder geval ergens heen.",
+    optionThemeReveal: "Theme Reveal",
+    optionEight: "8ste van de 8ste",
+    optionCharity: "Goede Doelen Borrel",
+    optionDinner: "Kerstdiner",
+    optionWinter: "Mini Wintersport",
+    optionRunup: "Gala Aanloop",
+    optionGala: "Lustrum Gala",
+    optionFullPass: "Volledige Lustrum Pas",
+    submitPlaceholder: "Placeholder versturen"
+  },
+  en: {
+    navProgramme: "Programme",
+    navCollaboration: "Collaboration",
+    navSettings: "Settings",
+    navSignup: "Sign up",
+    themeDark: "Dark",
+    themeLight: "Light",
+    heroKicker: "AEGEE-Enschede presents the click you should open",
+    heroCopy: "A pixel-branded lustrum year with suspicious headlines, real activities, warm orange bars, and enough cursor energy to make every member wonder what happens next.",
+    heroPrimary: "Reveal programme",
+    heroSecondary: "Collaborate with us",
+    introRevealTitle: "Theme Reveal",
+    introRevealCopy: "2 July: first official reveal with drinks and hype",
+    introDateTitle: "Core Date",
+    introDateCopy: "8 August: the 8ste van de 8ste member moment",
+    introStyleTitle: "Style",
+    introStyleCopy: "Official pixel cursor, warm bars, black/white contrast",
+    activitiesKicker: "Latest planning from the committee",
+    activitiesTitle: "Activities pulled from the current programme",
+    tagTwoJuly: "2 July",
+    tagEightAugust: "8 August",
+    tagSixteenOctober: "16 October",
+    tagWinter: "Winter",
+    tagTba: "TBA",
+    tagGalaRunup: "Gala Run-Up",
+    tagSpring: "Spring 2027",
+    activityRevealTitle: "The Theme Reveal Is Too Good To Stay Hidden",
+    activityRevealCopy: "The first public reveal of Clickbait: official logo energy, suspicious promo, and a themed drink moment on Asterion.",
+    activityEightTitle: "Local Association Finds One Weird 8/8 Trick",
+    activityEightCopy: "The 8ste van de 8ste: a low-threshold summer gathering with food, terrace plans, reveal-board vibes, and members old and new.",
+    activityCharityTitle: "This Charity Borrel Has A Progress Bar",
+    activityCharityCopy: "A good-cause borrel with game-show/LINGO ideas, a live donation meter, and a local cause focus shaped by the latest meetings.",
+    activityDinnerTitle: "Kerstdiner Guests Could Not Believe Course 8",
+    activityDinnerCopy: "A Christmas dinner concept with Eximiae being contacted and a restaurant-versus-location+catering plan under consideration.",
+    activityWinterTitle: "Mini Wintersport Without The Algorithm Knowing",
+    activityWinterCopy: "A compact winter activity still in concept phase, with the committee exploring a plan that stays fun, doable, and budget-aware.",
+    activityRunupTitle: "Gents, Corsages And Dance Moves Exposed",
+    activityRunupCopy: "A classy build-up track around the gala: gents pasmoment, corsage-making, and a dance workshop with proper lustrum flair.",
+    activityGalaTitle: "The Lustrum Gala Location Search Has Entered The Chat",
+    activityGalaCopy: "The gala is the big one. Locations and student-gala options are being compared, with the lustrum weekend after Easter as the planning direction.",
+    signupButton: "Sign up",
+    collabKicker: "Businesses hate missing visibility",
+    collabTitle: "Want your logo inside the clickbait?",
+    collabCopy: "We are building collaboration options for local companies and small businesses: activity support, branded games, promo mentions, and partnership packages around the gala and charity borrel.",
+    collabButton: "Open collaboration page",
+    scheduleKicker: "Current public planning",
+    scheduleTitle: "Programme timeline",
+    scheduleReveal: "Theme Reveal on Asterion",
+    scheduleEight: "8ste van de 8ste summer moment",
+    scheduleCharity: "Good-cause borrel and game-show fundraiser",
+    scheduleWinter: "Kerstdiner and mini wintersport concepts",
+    scheduleGala: "Gents, corsages, dance workshop, and Lustrum Gala",
+    gamesKicker: "Collaborative content you can actually play",
+    gamesTitle: "Scandalous Arcade Classics",
+    gamesCopy: "Six familiar games got caught wearing a Lustrum VIII skin. Scores are mostly for bragging rights and dramatic screenshots.",
+    gameSnakeTitle: "One Pixel Snack Changed Everything",
+    snakeControls: "Use arrow keys or WASD.",
+    gameDinoTitle: "Chrome Removed The Internet For This",
+    jumpControls: "Press space, up, or tap jump.",
+    minesLabel: "Mines",
+    gameMinesTitle: "Experts Are Clicking These Tiles Carefully",
+    mineStatus: "Left click reveal, right click flag.",
+    gameSudokuTitle: "This Grid Has 1 Logical Trick They Hate",
+    gameTetrisTitle: "Blocks Are Falling And Experts Are Concerned",
+    tetrisControls: "Move arrows, up rotate, space hard drop.",
+    gameFlappyTitle: "This Tiny Bird Is Still Emotionally Dangerous",
+    flappyControls: "Press space, up, or tap to flap.",
+    gameStart: "Start",
+    gameRun: "Run",
+    gameRestart: "Restart",
+    gameReset: "Reset",
+    gameCheck: "Check",
+    sudokuReady: "Ready",
+    sudokuEditing: "Editing",
+    sudokuSolved: "Solved",
+    sudokuSoFar: "So far so clicky",
+    sudokuSuspicious: "Suspicious numbers",
+    mineExploded: "Headline exploded. Reset?",
+    mineWin: "You found the clean story.",
+    finalKicker: "Limited pixels available",
+    finalTitle: "Join Lustrum VIII before this headline expires",
+    footerLine: "Click responsibly.",
+    collaborationPageSmall: "Collaboration page",
+    collabPageKicker: "For companies and local businesses",
+    collabPageTitle: "Put your brand in the Lustrum VIII feed",
+    collabPageCopy: "AEGEE-Enschede is celebrating Lustrum VIII with a year of pixel-themed activities for students, alumni, and friends. We are looking for partners who want visibility, goodwill, and a playful way to support student life in Enschede.",
+    collabStart: "Start a collaboration",
+    viewPublicSite: "View public site",
+    whyPartnerKicker: "Why partner?",
+    whyPartnerTitle: "Real activities, clear audiences, memorable branding",
+    benefitReachTitle: "Member reach",
+    benefitReachCopy: "Appear around member-facing activities like the theme reveal, 8/8 moment, charity borrel, Christmas dinner, and gala run-up.",
+    benefitGoodwillTitle: "Local goodwill",
+    benefitGoodwillCopy: "Support an active student association and a programme that includes a good-cause borrel with fundraising ideas.",
+    benefitStyleTitle: "Clickbait style",
+    benefitStyleCopy: "Get playful promo opportunities in the Lustrum VIII pixel visual system: warm bars, cursor icons, arcade games, and social posts.",
+    packagesKicker: "Possible packages",
+    packagesTitle: "Pick a route, or pitch your own ridiculous headline",
+    packageActivityTitle: "Activity Boost",
+    packageActivityCopy: "Support one activity with logo visibility, a thank-you mention, and optional on-location branding.",
+    packageArcadeTitle: "Arcade Partner",
+    packageArcadeCopy: "Attach your brand to one of the playable mini-games or a leaderboard challenge on the website.",
+    packageGalaTitle: "Gala Partner",
+    packageGalaCopy: "Help make the largest Lustrum VIII activity possible with a more prominent partnership around the gala.",
+    contactKicker: "Contact box",
+    contactTitle: "Let's make a deal worth clicking",
+    contactCopy: "This form opens an email draft. Replace the recipient in `collaboration.html` if the committee wants to use another address.",
+    formCompany: "Company",
+    formCompanyPlaceholder: "Company or organization",
+    formContact: "Contact person",
+    formName: "Name",
+    formNamePlaceholder: "Your name",
+    formActivity: "Activity",
+    formMessage: "What kind of partnership sounds interesting?",
+    formMessagePlaceholder: "Tell us what you would like to support, offer, or discuss.",
+    openEmail: "Open email draft",
+    collabFooter: "Collaborate on the click.",
+    backToSite: "Back to Lustrum VIII",
+    signupKicker: "Signup page",
+    signupTitle: "You clicked. Bold move.",
+    signupCopy: "This placeholder can be replaced with the final registration form or external ticket link. For now it confirms that every activity button leads somewhere real.",
+    optionThemeReveal: "Theme Reveal",
+    optionEight: "8ste van de 8ste",
+    optionCharity: "Good-Cause Borrel",
+    optionDinner: "Kerstdiner",
+    optionWinter: "Mini Wintersport",
+    optionRunup: "Gala Run-Up",
+    optionGala: "Lustrum Gala",
+    optionFullPass: "Full Lustrum Pass",
+    submitPlaceholder: "Submit placeholder"
+  }
 };
 
 const params = new URLSearchParams(window.location.search);
-const selectedActivity = activityMap[params.get("activity") || ""];
+const selectedActivity = params.get("activity") || "";
 const activitySelect = document.querySelector("#activity-select");
 const themeToggle = document.querySelector("#theme-toggle");
+const languageButtons = document.querySelectorAll("[data-lang]");
 const savedTheme = localStorage.getItem("lustrum-theme");
+let currentLanguage = localStorage.getItem("lustrum-language") || "nl";
+
+function t(key) {
+  return translations[currentLanguage]?.[key] || translations.nl[key] || key;
+}
 
 if (savedTheme === "dark") {
   document.body.classList.add("dark-mode");
+}
+
+function applyLanguage(language) {
+  currentLanguage = translations[language] ? language : "nl";
+  document.documentElement.lang = currentLanguage;
+  localStorage.setItem("lustrum-language", currentLanguage);
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    element.textContent = t(element.dataset.i18n);
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    element.placeholder = t(element.dataset.i18nPlaceholder);
+  });
+
+  languageButtons.forEach((button) => {
+    const isActive = button.dataset.lang === currentLanguage;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  syncThemeToggle();
 }
 
 function syncThemeToggle() {
   if (!themeToggle) return;
   const isDark = document.body.classList.contains("dark-mode");
   themeToggle.setAttribute("aria-pressed", String(isDark));
-  themeToggle.querySelector(".toggle-label").textContent = isDark ? "Light" : "Dark";
+  themeToggle.querySelector(".toggle-label").textContent = isDark ? t("themeLight") : t("themeDark");
 }
 
 themeToggle?.addEventListener("click", () => {
@@ -28,9 +324,15 @@ themeToggle?.addEventListener("click", () => {
   syncThemeToggle();
 });
 
-syncThemeToggle();
+languageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    applyLanguage(button.dataset.lang);
+  });
+});
 
-if (activitySelect && selectedActivity) {
+applyLanguage(currentLanguage);
+
+if (activitySelect && activityMap[selectedActivity]) {
   activitySelect.value = selectedActivity;
 }
 
@@ -129,7 +431,7 @@ function initSnake() {
     if (crashed) {
       clearInterval(timer);
       timer = null;
-      startButton.textContent = "Restart";
+      startButton.textContent = t("gameRestart");
       draw();
       return;
     }
@@ -161,7 +463,7 @@ function initSnake() {
     clearInterval(timer);
     reset();
     timer = setInterval(step, 125);
-    startButton.textContent = "Restart";
+    startButton.textContent = t("gameRestart");
   });
 
   reset();
@@ -193,7 +495,7 @@ function initDinoRun() {
   function jump() {
     if (!running) {
       running = true;
-      startButton.textContent = "Restart";
+      startButton.textContent = t("gameRestart");
       lastFrame = performance.now();
       frameId = requestAnimationFrame(loop);
     }
@@ -257,7 +559,7 @@ function initDinoRun() {
     if (overlaps(player, obstacle)) {
       running = false;
       cancelAnimationFrame(frameId);
-      startButton.textContent = "Restart";
+      startButton.textContent = t("gameRestart");
       draw();
       return;
     }
@@ -272,7 +574,7 @@ function initDinoRun() {
     cancelAnimationFrame(frameId);
     reset();
     running = true;
-    startButton.textContent = "Restart";
+    startButton.textContent = t("gameRestart");
     lastFrame = performance.now();
     frameId = requestAnimationFrame(loop);
   });
@@ -342,7 +644,7 @@ function initMinesweeper() {
       cells.forEach((item) => {
         if (item.mine) item.revealed = true;
       });
-      statusEl.textContent = "Headline exploded. Reset?";
+      statusEl.textContent = t("mineExploded");
       render();
       return;
     }
@@ -352,7 +654,7 @@ function initMinesweeper() {
     const safeCells = cells.filter((item) => !item.mine);
     if (safeCells.every((item) => item.revealed)) {
       gameOver = true;
-      statusEl.textContent = "You found the clean story.";
+      statusEl.textContent = t("mineWin");
     }
     render();
   }
@@ -380,7 +682,7 @@ function initMinesweeper() {
       cell.count = neighbors(index).filter((neighbor) => cells[neighbor].mine).length;
     });
     gameOver = false;
-    statusEl.textContent = "Left click reveal, right click flag.";
+    statusEl.textContent = t("mineStatus");
     render();
   }
 
@@ -434,11 +736,11 @@ function initSudoku() {
       input.addEventListener("input", () => {
         input.value = input.value.replace(/[^1-9]/g, "").slice(0, 1);
         input.classList.remove("wrong");
-        statusEl.textContent = "Editing";
+        statusEl.textContent = t("sudokuEditing");
       });
       boardEl.append(input);
     });
-    statusEl.textContent = "Ready";
+    statusEl.textContent = t("sudokuReady");
   }
 
   function check() {
@@ -453,9 +755,9 @@ function initSudoku() {
         input.classList.add("wrong");
       }
     });
-    if (correct && complete) statusEl.textContent = "Solved";
-    if (correct && !complete) statusEl.textContent = "So far so clicky";
-    if (!correct) statusEl.textContent = "Suspicious numbers";
+    if (correct && complete) statusEl.textContent = t("sudokuSolved");
+    if (correct && !complete) statusEl.textContent = t("sudokuSoFar");
+    if (!correct) statusEl.textContent = t("sudokuSuspicious");
   }
 
   checkButton.addEventListener("click", check);
@@ -585,7 +887,7 @@ function initTetris() {
       running = false;
       clearInterval(timer);
       timer = null;
-      startButton.textContent = "Restart";
+      startButton.textContent = t("gameRestart");
     }
   }
 
@@ -649,7 +951,7 @@ function initTetris() {
     score = 0;
     scoreEl.textContent = score;
     running = true;
-    startButton.textContent = "Restart";
+    startButton.textContent = t("gameRestart");
     spawn();
     draw();
     timer = setInterval(tick, 620);
@@ -746,7 +1048,7 @@ function initFlappy() {
   function stop() {
     running = false;
     cancelAnimationFrame(frameId);
-    startButton.textContent = "Restart";
+    startButton.textContent = t("gameRestart");
     draw();
   }
 
@@ -789,7 +1091,7 @@ function initFlappy() {
     if (!running) {
       reset();
       running = true;
-      startButton.textContent = "Restart";
+      startButton.textContent = t("gameRestart");
       lastFrame = performance.now();
       frameId = requestAnimationFrame(loop);
     }
@@ -799,7 +1101,7 @@ function initFlappy() {
   startButton.addEventListener("click", () => {
     reset();
     running = true;
-    startButton.textContent = "Restart";
+    startButton.textContent = t("gameRestart");
     cancelAnimationFrame(frameId);
     lastFrame = performance.now();
     frameId = requestAnimationFrame(loop);

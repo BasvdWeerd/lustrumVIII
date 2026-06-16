@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,35 +15,53 @@
   <body class="signup-page">
     <div class="scanlines" aria-hidden="true"></div>
     <main class="signup-shell">
-      <a class="back-link" href="index.html">Back to Lustrum VIII</a>
+      <div class="signup-topbar">
+        <a class="back-link" href="index.html" data-i18n="backToSite">Terug naar Lustrum VIII</a>
+        <details class="settings-menu">
+          <summary data-i18n="navSettings">Instellingen</summary>
+          <div class="settings-panel">
+            <div class="language-switch" aria-label="Language">
+              <button class="language-option" type="button" data-lang="nl">NL</button>
+              <button class="language-option" type="button" data-lang="en">EN</button>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+              <span class="toggle-icon" aria-hidden="true"></span>
+              <span class="toggle-label">Donker</span>
+            </button>
+          </div>
+        </details>
+      </div>
       <section class="signup-card" aria-labelledby="signup-title">
-        <p class="kicker">Actual signup page</p>
-        <h1 id="signup-title">You clicked. Bold move.</h1>
-        <p>
-          This placeholder can be replaced with the final registration form or
-          external ticket link. For now it confirms that every activity button
-          leads somewhere real.
+        <p class="kicker" data-i18n="signupKicker">Aanmeldpagina</p>
+        <h1 id="signup-title" data-i18n="signupTitle">Je klikte. Sterke zet.</h1>
+        <p data-i18n="signupCopy">
+          Deze placeholder kan later worden vervangen door het echte
+          registratieformulier of een externe ticketlink. Voor nu leidt elke
+          activiteitenknop in ieder geval ergens heen.
         </p>
         <form>
           <label>
-            Name
-            <input type="text" name="name" placeholder="Your name">
+            <span data-i18n="formName">Naam</span>
+            <input type="text" name="name" placeholder="Je naam" data-i18n-placeholder="formNamePlaceholder">
           </label>
           <label>
             Email
             <input type="email" name="email" placeholder="name@example.com">
           </label>
           <label>
-            Activity
+            <span data-i18n="formActivity">Activiteit</span>
             <select name="activity" id="activity-select">
-              <option>Opening Night</option>
-              <option>Clickbait City Game</option>
-              <option>Scandalous Dinner</option>
-              <option>Final Boss Party</option>
-              <option>Full Lustrum Pass</option>
+              <option value="theme-reveal" data-i18n="optionThemeReveal">Theme Reveal</option>
+              <option value="achtste-van-de-achtste" data-i18n="optionEight">8ste van de 8ste</option>
+              <option value="goed-doel-borrel" data-i18n="optionCharity">Goede Doelen Borrel</option>
+              <option value="kerstdiner" data-i18n="optionDinner">Kerstdiner</option>
+              <option value="mini-wintersport" data-i18n="optionWinter">Mini Wintersport</option>
+              <option value="gala-run-up" data-i18n="optionRunup">Gala Aanloop</option>
+              <option value="lustrum-gala" data-i18n="optionGala">Lustrum Gala</option>
+              <option value="full-pass" data-i18n="optionFullPass">Volledige Lustrum Pas</option>
             </select>
           </label>
-          <button class="button primary" type="button">Submit placeholder</button>
+          <button class="button primary" type="button" data-i18n="submitPlaceholder">Placeholder versturen</button>
         </form>
       </section>
     </main>

@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AEGEE-Enschede Lustrum VIII | Clickbait</title>
     <meta
       name="description"
-      content="Lustrum VIII of AEGEE-Enschede: a clickbait and pixel themed week of activities."
+      content="Lustrum VIII of AEGEE-Enschede: Clickbait, a pixel-themed year of activities, games, gala, and member events."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,112 +28,99 @@
         </span>
       </a>
       <nav aria-label="Main navigation">
-        <a href="#activities">Activities</a>
+        <a href="#activities" data-i18n="navProgramme">Programma</a>
+        <a href="#schedule">Planning</a>
         <a href="#games">Games</a>
-        <a href="#schedule">Schedule</a>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
-          <span class="toggle-icon" aria-hidden="true"></span>
-          <span class="toggle-label">Dark</span>
-        </button>
-        <a class="nav-cta" href="signup.html">Sign up</a>
+        <a href="collaboration.html" data-i18n="navCollaboration">Samenwerken</a>
+        <details class="settings-menu">
+          <summary data-i18n="navSettings">Instellingen</summary>
+          <div class="settings-panel">
+            <div class="language-switch" aria-label="Language">
+              <button class="language-option" type="button" data-lang="nl">NL</button>
+              <button class="language-option" type="button" data-lang="en">EN</button>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+              <span class="toggle-icon" aria-hidden="true"></span>
+              <span class="toggle-label">Donker</span>
+            </button>
+          </div>
+        </details>
+        <a class="nav-cta" href="signup.html" data-i18n="navSignup">Aanmelden</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
+      <section class="hero official-hero" aria-labelledby="hero-title">
         <div class="hero-content">
-          <p class="kicker">You won't believe what happens in Enschede</p>
+          <p class="kicker" data-i18n="heroKicker">AEGEE-Enschede presenteert de klik die je wel moet openen</p>
           <h1 id="hero-title">Lustrum VIII: Clickbait</h1>
-          <p class="hero-copy">
-            A week of suspiciously exciting headlines, pixel-perfect chaos, and
-            activities that are definitely worth opening in a new tab.
+          <p class="hero-copy" data-i18n="heroCopy">
+            Een pixel-branded lustrumjaar met verdachte headlines, echte
+            activiteiten, warme oranje balken en genoeg cursor-energie om ieder
+            lid te laten klikken.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#activities">Reveal activities</a>
-            <a class="button secondary" href="signup.html">Sign up now</a>
+            <a class="button primary" href="#activities" data-i18n="heroPrimary">Onthul het programma</a>
+            <a class="button secondary" href="collaboration.html" data-i18n="heroSecondary">Werk met ons samen</a>
           </div>
         </div>
 
-        <div class="hero-panel" aria-label="Pixel news interface preview">
-          <div class="browser-bar">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="breaking">BREAKING: Lustrum VIII has entered the chat</div>
-          <div class="pixel-scene" aria-hidden="true">
-            <div class="pixel-city">
-              <span class="tower one"></span>
-              <span class="tower two"></span>
-              <span class="tower three"></span>
-              <span class="tower four"></span>
-            </div>
-            <div class="cursor">CLICK</div>
-          </div>
-          <div class="ticker">
-            <span>8 shocking days</span>
-            <span>1 legendary association</span>
-            <span>0 boring headlines</span>
+        <div class="logo-showcase" aria-label="Official Lustrum VIII logo">
+          <img src="assets/lustrum-combined-dark.png" alt="AEGEE-Enschede Lustrum VIII official pixel logo">
+          <div class="search-strip" aria-hidden="true">
+            <img src="assets/lustrum-searchbar.png" alt="">
           </div>
         </div>
       </section>
 
       <section class="intro" aria-label="Event highlights">
         <div>
-          <strong>Theme</strong>
-          <span>Clickbait, retro web, pixel pop</span>
+          <strong data-i18n="introRevealTitle">Thema Reveal</strong>
+          <span data-i18n="introRevealCopy">2 juli: eerste officiële onthulling met drankjes en hype</span>
         </div>
         <div>
-          <strong>For</strong>
-          <span>Members, alumni, friends, and curious clickers</span>
+          <strong data-i18n="introDateTitle">Kerndatum</strong>
+          <span data-i18n="introDateCopy">8 augustus: het 8ste van de 8ste ledenmoment</span>
         </div>
         <div>
-          <strong>Vibe</strong>
-          <span>Playful, chaotic, proudly AEGEE</span>
+          <strong data-i18n="introStyleTitle">Stijl</strong>
+          <span data-i18n="introStyleCopy">Officiële pixelcursor, warme balken, zwart-wit contrast</span>
         </div>
       </section>
 
       <section class="section-heading" id="activities">
-        <p class="kicker">Top stories near you</p>
-        <h2>Activities that sound fake but are real</h2>
+        <p class="kicker" data-i18n="activitiesKicker">Laatste planning van de commissie</p>
+        <h2 data-i18n="activitiesTitle">Activiteiten uit het huidige programma</h2>
       </section>
 
       <section class="activities" aria-label="Lustrum activities">
         <article class="activity-card">
-          <div class="pixel-art trophy" aria-hidden="true">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
+          <div class="activity-media gradient-media" aria-hidden="true">
+            <img src="assets/aegee-logo-light.png" alt="">
           </div>
           <div class="activity-body">
-            <p class="tag">Opening Night</p>
-            <h3>This Kick-Off Has 8 Secret Ingredients</h3>
-            <p>
-              Start the lustrum with a headline-hunting pub quiz, questionable
-              trivia, and a countdown that looks like it escaped from 2006.
+            <p class="tag" data-i18n="tagTwoJuly">2 juli</p>
+            <h3 data-i18n="activityRevealTitle">De Theme Reveal Is Te Goed Om Verborgen Te Blijven</h3>
+            <p data-i18n="activityRevealCopy">
+              De eerste publieke onthulling van Clickbait: officieel logo,
+              verdachte promo en een thematisch drinkmoment op Asterion.
             </p>
-            <a class="button card-button" href="signup.html?activity=opening-night">Sign up</a>
+            <a class="button card-button" href="signup.html?activity=theme-reveal" data-i18n="signupButton">Aanmelden</a>
           </div>
         </article>
 
         <article class="activity-card">
-          <div class="pixel-art cursor-art" aria-hidden="true">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
+          <div class="activity-media cursor-sheet" aria-hidden="true">
+            <img src="assets/cursor-icons.png" alt="">
           </div>
           <div class="activity-body">
-            <p class="tag">City Game</p>
-            <h3>Local Students Found This One Weird Route</h3>
-            <p>
-              A pixel-map treasure hunt through Enschede, packed with hidden
-              clues, dramatic pop-ups, and teams chasing the same bad lead.
+            <p class="tag" data-i18n="tagEightAugust">8 augustus</p>
+            <h3 data-i18n="activityEightTitle">Lokale Vereniging Vindt Eén Rare 8/8 Truc</h3>
+            <p data-i18n="activityEightCopy">
+              De 8ste van de 8ste: een laagdrempelig zomermoment met eten,
+              terrasplannen, reveal-bord vibes en oude én nieuwe leden.
             </p>
-            <a class="button card-button" href="signup.html?activity=city-game">Sign up</a>
+            <a class="button card-button" href="signup.html?activity=achtste-van-de-achtste" data-i18n="signupButton">Aanmelden</a>
           </div>
         </article>
 
@@ -146,13 +133,51 @@
             <span></span><span></span><span></span><span></span><span></span>
           </div>
           <div class="activity-body">
-            <p class="tag">Dinner</p>
-            <h3>You Clicked For Drama, Stayed For Dinner</h3>
-            <p>
-              A themed dinner where each course arrives with a ridiculous title,
-              an unexpected twist, and just enough spectacle for the group chat.
+            <p class="tag" data-i18n="tagSixteenOctober">16 oktober</p>
+            <h3 data-i18n="activityCharityTitle">Deze Goede Doelen Borrel Heeft Een Progress Bar</h3>
+            <p data-i18n="activityCharityCopy">
+              Een goede doelen borrel met spelshow/LINGO ideeën, een live
+              donatiemeter en een lokale insteek uit de laatste vergaderingen.
             </p>
-            <a class="button card-button" href="signup.html?activity=clickbait-dinner">Sign up</a>
+            <a class="button card-button" href="signup.html?activity=goed-doel-borrel" data-i18n="signupButton">Aanmelden</a>
+          </div>
+        </article>
+
+        <article class="activity-card">
+          <div class="pixel-art trophy" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="activity-body">
+            <p class="tag" data-i18n="tagWinter">Winter</p>
+            <h3 data-i18n="activityDinnerTitle">Kerstdinergasten Geloven Gang 8 Niet</h3>
+            <p data-i18n="activityDinnerCopy">
+              Een kerstdinerconcept waarbij Eximiae wordt benaderd en restaurant
+              versus zaal+catering nog wordt afgewogen.
+            </p>
+            <a class="button card-button" href="signup.html?activity=kerstdiner" data-i18n="signupButton">Aanmelden</a>
+          </div>
+        </article>
+
+        <article class="activity-card">
+          <div class="pixel-art cursor-art" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="activity-body">
+            <p class="tag" data-i18n="tagTba">N.t.b.</p>
+            <h3 data-i18n="activityWinterTitle">Mini Wintersport Zonder Dat Het Algoritme Het Weet</h3>
+            <p data-i18n="activityWinterCopy">
+              Een compacte winteractiviteit in conceptfase, waarbij de commissie
+              zoekt naar iets leuks, haalbaars en budgetbewust.
+            </p>
+            <a class="button card-button" href="signup.html?activity=mini-wintersport" data-i18n="signupButton">Aanmelden</a>
           </div>
         </article>
 
@@ -165,23 +190,65 @@
             <span></span><span></span><span></span><span></span><span></span>
           </div>
           <div class="activity-body">
-            <p class="tag">Party</p>
-            <h3>Doctors Hate This One Dancefloor Trick</h3>
-            <p>
-              Neon pixels, nostalgic internet hits, meme-worthy photo corners,
-              and a party concept that has absolutely no chill.
+            <p class="tag" data-i18n="tagGalaRunup">Gala Aanloop</p>
+            <h3 data-i18n="activityRunupTitle">Gents, Corsages En Dansmoves Gelekt</h3>
+            <p data-i18n="activityRunupCopy">
+              Een stijlvolle aanloop naar het gala: gents pasmoment, corsages
+              maken en een dansworkshop met echte lustrumflair.
             </p>
-            <a class="button card-button" href="signup.html?activity=party">Sign up</a>
+            <a class="button card-button" href="signup.html?activity=gala-run-up" data-i18n="signupButton">Aanmelden</a>
+          </div>
+        </article>
+
+        <article class="activity-card wide-activity">
+          <div class="activity-media logo-media" aria-hidden="true">
+            <img src="assets/lustrum-combined-dark.png" alt="">
+          </div>
+          <div class="activity-body">
+            <p class="tag" data-i18n="tagSpring">Voorjaar 2027</p>
+            <h3 data-i18n="activityGalaTitle">De Zoektocht Naar De Galalocatie Is Begonnen</h3>
+            <p data-i18n="activityGalaCopy">
+              Het gala is de grote klapper. Locaties en studentengala-opties
+              worden vergeleken, met het lustrumweekend na Pasen als richting.
+            </p>
+            <a class="button card-button" href="signup.html?activity=lustrum-gala" data-i18n="signupButton">Aanmelden</a>
           </div>
         </article>
       </section>
 
+      <section class="sponsor-teaser" aria-label="Collaboration teaser">
+        <div>
+          <p class="kicker" data-i18n="collabKicker">Bedrijven haten gemiste zichtbaarheid</p>
+          <h2 data-i18n="collabTitle">Wil je logo in de clickbait?</h2>
+          <p data-i18n="collabCopy">
+            We bouwen samenwerkingsopties voor lokale bedrijven en kleine
+            ondernemingen: activiteitensteun, branded games, promo-vermeldingen
+            en partnerships rond gala en goede doelen borrel.
+          </p>
+        </div>
+        <a class="button primary" href="collaboration.html" data-i18n="collabButton">Open samenwerkingspagina</a>
+      </section>
+
+      <section class="schedule" id="schedule" aria-labelledby="schedule-title">
+        <div>
+          <p class="kicker" data-i18n="scheduleKicker">Huidige publieke planning</p>
+          <h2 id="schedule-title" data-i18n="scheduleTitle">Programmatijdlijn</h2>
+        </div>
+        <ol>
+          <li><time datetime="2026-07-02">2 jul</time><span data-i18n="scheduleReveal">Theme Reveal op Asterion</span></li>
+          <li><time datetime="2026-08-08">8 aug</time><span data-i18n="scheduleEight">8ste van de 8ste zomermoment</span></li>
+          <li><time datetime="2026-10-16">16 okt</time><span data-i18n="scheduleCharity">Goede doelen borrel en spelshow-fundraiser</span></li>
+          <li><time datetime="2026-12" data-i18n="tagWinter">Winter</time><span data-i18n="scheduleWinter">Kerstdiner en mini wintersport concepten</span></li>
+          <li><time datetime="2027">2027</time><span data-i18n="scheduleGala">Gents, corsages, dansworkshop en Lustrum Gala</span></li>
+        </ol>
+      </section>
+
       <section class="section-heading games-heading" id="games">
-        <p class="kicker">Sponsored content you can actually play</p>
-        <h2>Scandalous Arcade Classics</h2>
-        <p>
-          Four familiar games got caught wearing a Lustrum VIII skin. Scores are
-          mostly for bragging rights and dramatic screenshots.
+        <p class="kicker" data-i18n="gamesKicker">Samenwerkingscontent die je echt kunt spelen</p>
+        <h2 data-i18n="gamesTitle">Schandalige Arcadeklassiekers</h2>
+        <p data-i18n="gamesCopy">
+          Zes bekende games zijn betrapt in een Lustrum VIII jasje. Scores zijn
+          vooral voor opscheprechten en dramatische screenshots.
         </p>
       </section>
 
@@ -191,11 +258,11 @@
             <p class="tag">Snake</p>
             <strong>Score: <span id="snake-score">0</span></strong>
           </div>
-          <h3>One Pixel Snack Changed Everything</h3>
+          <h3 data-i18n="gameSnakeTitle">Eén Pixel Snack Veranderde Alles</h3>
           <canvas id="snake-board" width="320" height="320" aria-label="Playable snake game"></canvas>
           <div class="game-controls">
-            <button class="button card-button" id="snake-start" type="button">Start</button>
-            <span>Use arrow keys or WASD.</span>
+            <button class="button card-button" id="snake-start" type="button" data-i18n="gameStart">Start</button>
+            <span data-i18n="snakeControls">Gebruik pijltjestoetsen of WASD.</span>
           </div>
         </article>
 
@@ -204,37 +271,37 @@
             <p class="tag">Dino Run</p>
             <strong>Score: <span id="dino-score">0</span></strong>
           </div>
-          <h3>Chrome Removed The Internet For This</h3>
+          <h3 data-i18n="gameDinoTitle">Chrome Haalde Hiervoor Het Internet Weg</h3>
           <canvas id="dino-board" width="520" height="220" aria-label="Playable offline runner game"></canvas>
           <div class="game-controls">
-            <button class="button card-button" id="dino-start" type="button">Run</button>
-            <span>Press space, up, or tap jump.</span>
+            <button class="button card-button" id="dino-start" type="button" data-i18n="gameRun">Ren</button>
+            <span data-i18n="jumpControls">Druk op spatie, omhoog, of tik om te springen.</span>
           </div>
         </article>
 
         <article class="game-card mines-game">
           <div class="game-topline">
             <p class="tag">Minesweeper</p>
-            <strong>Mines: <span id="mine-count">10</span></strong>
+            <strong><span data-i18n="minesLabel">Mijnen</span>: <span id="mine-count">10</span></strong>
           </div>
-          <h3>Experts Are Clicking These Tiles Carefully</h3>
+          <h3 data-i18n="gameMinesTitle">Experts Klikken Deze Tegels Voorzichtig Aan</h3>
           <div class="mine-board" id="mine-board" aria-label="Playable minesweeper board"></div>
           <div class="game-controls">
-            <button class="button card-button" id="mine-reset" type="button">Reset</button>
-            <span id="mine-status">Left click reveal, right click flag.</span>
+            <button class="button card-button" id="mine-reset" type="button" data-i18n="gameReset">Reset</button>
+            <span id="mine-status" data-i18n="mineStatus">Links klikken onthult, rechts klikken markeert.</span>
           </div>
         </article>
 
         <article class="game-card sudoku-game">
           <div class="game-topline">
             <p class="tag">Sudoku</p>
-            <strong id="sudoku-status">Ready</strong>
+            <strong id="sudoku-status" data-i18n="sudokuReady">Klaar</strong>
           </div>
-          <h3>This Grid Has 1 Logical Trick They Hate</h3>
+          <h3 data-i18n="gameSudokuTitle">Dit Raster Heeft 1 Logische Truc Die Ze Haten</h3>
           <div class="sudoku-board" id="sudoku-board" aria-label="Playable sudoku board"></div>
           <div class="game-controls">
-            <button class="button card-button" id="sudoku-check" type="button">Check</button>
-            <button class="button secondary mini-button" id="sudoku-reset" type="button">Reset</button>
+            <button class="button card-button" id="sudoku-check" type="button" data-i18n="gameCheck">Check</button>
+            <button class="button secondary mini-button" id="sudoku-reset" type="button" data-i18n="gameReset">Reset</button>
           </div>
         </article>
 
@@ -243,11 +310,11 @@
             <p class="tag">Tetris</p>
             <strong>Score: <span id="tetris-score">0</span></strong>
           </div>
-          <h3>Blocks Are Falling And Experts Are Concerned</h3>
+          <h3 data-i18n="gameTetrisTitle">Blokken Vallen En Experts Maken Zich Zorgen</h3>
           <canvas id="tetris-board" width="240" height="480" aria-label="Playable tetris game"></canvas>
           <div class="game-controls">
-            <button class="button card-button" id="tetris-start" type="button">Start</button>
-            <span>Move arrows, up rotate, space hard drop.</span>
+            <button class="button card-button" id="tetris-start" type="button" data-i18n="gameStart">Start</button>
+            <span data-i18n="tetrisControls">Pijltjes bewegen, omhoog draait, spatie laat vallen.</span>
           </div>
         </article>
 
@@ -256,38 +323,25 @@
             <p class="tag">Flappy</p>
             <strong>Score: <span id="flappy-score">0</span></strong>
           </div>
-          <h3>This Tiny Bird Is Still Emotionally Dangerous</h3>
+          <h3 data-i18n="gameFlappyTitle">Deze Kleine Vogel Is Nog Steeds Emotioneel Gevaarlijk</h3>
           <canvas id="flappy-board" width="420" height="300" aria-label="Playable flappy bird style game"></canvas>
           <div class="game-controls">
-            <button class="button card-button" id="flappy-start" type="button">Start</button>
-            <span>Press space, up, or tap to flap.</span>
+            <button class="button card-button" id="flappy-start" type="button" data-i18n="gameStart">Start</button>
+            <span data-i18n="flappyControls">Druk op spatie, omhoog, of tik om te flappen.</span>
           </div>
         </article>
       </section>
 
-      <section class="schedule" id="schedule" aria-labelledby="schedule-title">
-        <div>
-          <p class="kicker">Leaked timeline</p>
-          <h2 id="schedule-title">The dummy programme</h2>
-        </div>
-        <ol>
-          <li><time datetime="2026-09-21">Mon</time><span>Opening Night</span></li>
-          <li><time datetime="2026-09-22">Tue</time><span>Clickbait City Game</span></li>
-          <li><time datetime="2026-09-24">Thu</time><span>Scandalous Dinner</span></li>
-          <li><time datetime="2026-09-26">Sat</time><span>Final Boss Party</span></li>
-        </ol>
-      </section>
-
       <section class="final-cta" aria-label="Sign up call to action">
-        <p class="kicker">Limited pixels available</p>
-        <h2>Join Lustrum VIII before this headline expires</h2>
-        <a class="button primary" href="signup.html">Sign up</a>
+        <p class="kicker" data-i18n="finalKicker">Beperkte pixels beschikbaar</p>
+        <h2 data-i18n="finalTitle">Doe mee met Lustrum VIII voordat deze headline verloopt</h2>
+        <a class="button primary" href="signup.html" data-i18n="signupButton">Aanmelden</a>
       </section>
     </main>
 
     <footer>
       <span>AEGEE-Enschede Lustrum VIII</span>
-      <span>Click responsibly.</span>
+      <span data-i18n="footerLine">Klik verantwoordelijk.</span>
     </footer>
 
     <script src="script.js"></script>
