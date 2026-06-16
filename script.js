@@ -11,6 +11,7 @@ const activityMap = {
 const translations = {
   nl: {
     navProgramme: "Programma",
+    navGames: "Spelletjes",
     navCollaboration: "Samenwerken",
     navSettings: "Instellingen",
     navSignup: "Aanmelden",
@@ -64,6 +65,16 @@ const translations = {
     gamesKicker: "Samenwerkingscontent die je echt kunt spelen",
     gamesTitle: "Schandalige Arcadeklassiekers",
     gamesCopy: "Zes bekende games zijn betrapt in een Lustrum VIII jasje. Scores zijn vooral voor opscheprechten en dramatische screenshots.",
+    gamesPreviewKicker: "Klikbare klassiekers",
+    gamesPreviewTitle: "De arcade heeft een eigen tabblad gekregen",
+    gamesPreviewCopy: "Snake, Dino Run, Minesweeper, Sudoku, Tetris en Flappy staan nu op hun eigen pagina. Deze preview brengt je naar de volledige spelletjeshal.",
+    gamesPreviewButton: "Open de spelletjes",
+    gamesPreviewLabel: "PLAY",
+    gamesHubKicker: "Lustrum VIII Arcade",
+    gamesHubTitle: "Kies je clickbait klassieker",
+    gamesHubCopy: "Elk spelletje heeft nu een eigen pagina, zodat de homepage netjes blijft en de arcade alle ruimte krijgt.",
+    openGame: "Open spel",
+    backToGames: "Terug naar spelletjes",
     gameSnakeTitle: "Een Pixel Snack Veranderde Alles",
     snakeControls: "Gebruik pijltjestoetsen of WASD.",
     gameDinoTitle: "Chrome Haalde Hiervoor Het Internet Weg",
@@ -142,6 +153,7 @@ const translations = {
   },
   en: {
     navProgramme: "Programme",
+    navGames: "Games",
     navCollaboration: "Collaboration",
     navSettings: "Settings",
     navSignup: "Sign up",
@@ -195,6 +207,16 @@ const translations = {
     gamesKicker: "Collaborative content you can actually play",
     gamesTitle: "Scandalous Arcade Classics",
     gamesCopy: "Six familiar games got caught wearing a Lustrum VIII skin. Scores are mostly for bragging rights and dramatic screenshots.",
+    gamesPreviewKicker: "Clickable classics",
+    gamesPreviewTitle: "The arcade got its own tab",
+    gamesPreviewCopy: "Snake, Dino Run, Minesweeper, Sudoku, Tetris, and Flappy now each have their own page. This preview takes you to the full game hall.",
+    gamesPreviewButton: "Open the games",
+    gamesPreviewLabel: "PLAY",
+    gamesHubKicker: "Lustrum VIII Arcade",
+    gamesHubTitle: "Choose your clickbait classic",
+    gamesHubCopy: "Every game now has its own page, keeping the homepage tidy while giving the arcade room to breathe.",
+    openGame: "Open game",
+    backToGames: "Back to games",
     gameSnakeTitle: "One Pixel Snack Changed Everything",
     snakeControls: "Use arrow keys or WASD.",
     gameDinoTitle: "Chrome Removed The Internet For This",
@@ -350,9 +372,12 @@ document.querySelectorAll(".activity-card").forEach((card) => {
 });
 
 const gameKeys = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " ", "w", "a", "s", "d"];
+const hasPlayableGame = Boolean(
+  document.querySelector("#snake-board, #dino-board, #mine-board, #sudoku-board, #tetris-board, #flappy-board")
+);
 
 window.addEventListener("keydown", (event) => {
-  if (gameKeys.includes(event.key)) {
+  if (hasPlayableGame && gameKeys.includes(event.key)) {
     event.preventDefault();
   }
 });

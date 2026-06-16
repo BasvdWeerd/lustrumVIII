@@ -741,6 +741,7 @@ body.dark-mode .intro div {
 body.dark-mode .activity-body p:not(.tag),
 body.dark-mode .games-heading p:not(.kicker),
 body.dark-mode .game-controls span,
+body.dark-mode .game-preview-copy p:not(.kicker),
 body.dark-mode .sponsor-card p,
 body.dark-mode .package-card p,
 body.dark-mode .contact-copy {
@@ -879,6 +880,169 @@ textarea {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.45;
+}
+
+.game-preview {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1fr);
+  gap: 28px;
+  align-items: stretch;
+  margin: 72px 0 0;
+}
+
+.game-preview-copy,
+.game-preview-screen,
+.arcade-hero,
+.game-link-card,
+.single-game {
+  border: 5px solid var(--ink);
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.game-preview-copy {
+  padding: clamp(26px, 5vw, 44px);
+}
+
+.game-preview-copy p:not(.kicker) {
+  color: #36394a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.game-preview-screen {
+  position: relative;
+  display: grid;
+  align-content: stretch;
+  overflow: hidden;
+  min-height: 360px;
+  background: #050505;
+  color: white;
+}
+
+.preview-browser {
+  display: flex;
+  gap: 8px;
+  padding: 14px;
+  border-bottom: 5px solid var(--ink);
+  background: var(--border-gradient);
+}
+
+.preview-browser i {
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--ink);
+  background: #050505;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  padding: 28px;
+}
+
+.preview-grid b {
+  aspect-ratio: 1;
+  border: 3px solid #ffffff;
+  background: transparent;
+}
+
+.preview-grid b:nth-child(3n),
+.preview-grid b:nth-child(5n) {
+  background: var(--orange);
+}
+
+.preview-grid b:nth-child(7n) {
+  background: var(--acid);
+}
+
+.preview-label {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  padding: 14px 16px;
+  border: 4px solid var(--ink);
+  background: var(--acid);
+  color: #080808;
+  box-shadow: 6px 6px 0 var(--ink);
+  font-family: "Press Start 2P", monospace;
+}
+
+.arcade-hero {
+  margin: 56px 0 30px;
+  padding: clamp(28px, 6vw, 54px);
+  background: #050505;
+  color: white;
+}
+
+.arcade-hero .hero-copy {
+  color: #f4dfb8;
+}
+
+.game-link-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 72px;
+}
+
+.game-link-card {
+  display: grid;
+  gap: 18px;
+  min-height: 250px;
+  padding: 22px;
+  color: var(--ink);
+}
+
+.game-link-card strong {
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1;
+}
+
+.game-link-card > span:last-child {
+  align-self: end;
+  width: fit-content;
+  padding: 10px 12px;
+  border: 3px solid var(--ink);
+  background: var(--acid);
+  box-shadow: 4px 4px 0 var(--ink);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.game-page-shell {
+  width: min(860px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0 80px;
+}
+
+.single-game {
+  padding: clamp(18px, 4vw, 34px);
+}
+
+.single-game h1 {
+  font-size: clamp(28px, 5vw, 56px);
+  text-shadow: 4px 4px 0 var(--cyan), 8px 8px 0 var(--hot);
+}
+
+.single-game canvas,
+.single-game .mine-board,
+.single-game .sudoku-board {
+  max-width: 100%;
+  justify-self: center;
+}
+
+.single-game.snake-game canvas,
+.single-game .mine-board,
+.single-game .sudoku-board {
+  width: min(100%, 520px);
+}
+
+.single-game.dino-game canvas,
+.single-game.flappy-game canvas {
+  width: 100%;
 }
 
 .games-grid {
@@ -1201,6 +1365,11 @@ body.dark-mode .hero-panel,
 body.dark-mode .logo-showcase,
 body.dark-mode .activity-card,
 body.dark-mode .game-card,
+body.dark-mode .game-preview-copy,
+body.dark-mode .game-preview-screen,
+body.dark-mode .arcade-hero,
+body.dark-mode .game-link-card,
+body.dark-mode .single-game,
 body.dark-mode .signup-card,
 body.dark-mode .sponsor-card,
 body.dark-mode .package-card,
@@ -1222,6 +1391,11 @@ body.dark-mode .hero-panel,
 body.dark-mode .logo-showcase,
 body.dark-mode .activity-card,
 body.dark-mode .game-card,
+body.dark-mode .game-preview-copy,
+body.dark-mode .game-preview-screen,
+body.dark-mode .arcade-hero,
+body.dark-mode .game-link-card,
+body.dark-mode .single-game,
 body.dark-mode .schedule,
 body.dark-mode .final-cta,
 body.dark-mode .signup-card,
@@ -1263,6 +1437,7 @@ body.dark-mode .toggle-icon {
 
   .hero,
   .schedule,
+  .game-preview,
   .sponsor-hero,
   .contact-section {
     grid-template-columns: 1fr;
@@ -1275,6 +1450,7 @@ body.dark-mode .toggle-icon {
   .intro,
   .activities,
   .games-grid,
+  .game-link-grid,
   .sponsor-grid,
   .sponsor-packages {
     grid-template-columns: 1fr;

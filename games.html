@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spelletjes | AEGEE-Enschede Lustrum VIII</title>
+    <meta name="description" content="Speel de Lustrum VIII clickbait arcade games.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="AEGEE-Enschede Lustrum VIII home">
+        <span class="brand-mark">VIII</span>
+        <span>
+          <strong>AEGEE-Enschede</strong>
+          <small>Lustrum VIII</small>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#activities" data-i18n="navProgramme">Programma</a>
+        <a href="index.html#schedule">Planning</a>
+        <a href="games.html" data-i18n="navGames">Spelletjes</a>
+        <a href="collaboration.html" data-i18n="navCollaboration">Samenwerken</a>
+        <details class="settings-menu">
+          <summary data-i18n="navSettings">Instellingen</summary>
+          <div class="settings-panel">
+            <div class="language-switch" aria-label="Language">
+              <button class="language-option" type="button" data-lang="nl">NL</button>
+              <button class="language-option" type="button" data-lang="en">EN</button>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+              <span class="toggle-icon" aria-hidden="true"></span>
+              <span class="toggle-label">Donker</span>
+            </button>
+          </div>
+        </details>
+      </nav>
+    </header>
+
+    <main>
+      <section class="arcade-hero" aria-labelledby="arcade-title">
+        <p class="kicker" data-i18n="gamesHubKicker">Lustrum VIII Arcade</p>
+        <h1 id="arcade-title" data-i18n="gamesHubTitle">Kies je clickbait klassieker</h1>
+        <p class="hero-copy" data-i18n="gamesHubCopy">
+          Elk spelletje heeft nu een eigen pagina, zodat de homepage netjes
+          blijft en de arcade alle ruimte krijgt.
+        </p>
+      </section>
+
+      <section class="game-link-grid" aria-label="Spelletjes">
+        <a class="game-link-card" href="snake.html">
+          <span class="tag">Snake</span>
+          <strong data-i18n="gameSnakeTitle">Een Pixel Snack Veranderde Alles</strong>
+          <span data-i18n="openGame">Open spel</span>
+        </a>
+        <a class="game-link-card" href="dinorun.html">
+          <span class="tag">Dino Run</span>
+          <strong data-i18n="gameDinoTitle">Chrome Haalde Hiervoor Het Internet Weg</strong>
+          <span data-i18n="openGame">Open spel</span>
+        </a>
+        <a class="game-link-card" href="minesweeper.html">
+          <span class="tag">Minesweeper</span>
+          <strong data-i18n="gameMinesTitle">Experts Klikken Deze Tegels Voorzichtig Aan</strong>
+          <span data-i18n="openGame">Open spel</span>
+        </a>
+        <a class="game-link-card" href="sudoku.html">
+          <span class="tag">Sudoku</span>
+          <strong data-i18n="gameSudokuTitle">Dit Raster Heeft 1 Logische Truc Die Ze Haten</strong>
+          <span data-i18n="openGame">Open spel</span>
+        </a>
+        <a class="game-link-card" href="tetris.html">
+          <span class="tag">Tetris</span>
+          <strong data-i18n="gameTetrisTitle">Blokken Vallen En Experts Maken Zich Zorgen</strong>
+          <span data-i18n="openGame">Open spel</span>
+        </a>
+        <a class="game-link-card" href="flappy.html">
+          <span class="tag">Flappy</span>
+          <strong data-i18n="gameFlappyTitle">Deze Kleine Vogel Is Nog Steeds Emotioneel Gevaarlijk</strong>
+          <span data-i18n="openGame">Open spel</span>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <span>AEGEE-Enschede Lustrum VIII</span>
+      <span data-i18n="footerLine">Klik verantwoordelijk.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

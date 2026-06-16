@@ -30,7 +30,7 @@
       <nav aria-label="Main navigation">
         <a href="#activities" data-i18n="navProgramme">Programma</a>
         <a href="#schedule">Planning</a>
-        <a href="#games">Games</a>
+        <a href="games.html" data-i18n="navGames">Spelletjes</a>
         <a href="collaboration.html" data-i18n="navCollaboration">Samenwerken</a>
         <details class="settings-menu">
           <summary data-i18n="navSettings">Instellingen</summary>
@@ -243,93 +243,28 @@
         </ol>
       </section>
 
-      <section class="section-heading games-heading" id="games">
-        <p class="kicker" data-i18n="gamesKicker">Samenwerkingscontent die je echt kunt spelen</p>
-        <h2 data-i18n="gamesTitle">Schandalige Arcadeklassiekers</h2>
-        <p data-i18n="gamesCopy">
-          Zes bekende games zijn betrapt in een Lustrum VIII jasje. Scores zijn
-          vooral voor opscheprechten en dramatische screenshots.
-        </p>
-      </section>
-
-      <section class="games-grid" aria-label="Playable clickbait arcade games">
-        <article class="game-card snake-game">
-          <div class="game-topline">
-            <p class="tag">Snake</p>
-            <strong>Score: <span id="snake-score">0</span></strong>
-          </div>
-          <h3 data-i18n="gameSnakeTitle">Eén Pixel Snack Veranderde Alles</h3>
-          <canvas id="snake-board" width="320" height="320" aria-label="Playable snake game"></canvas>
-          <div class="game-controls">
-            <button class="button card-button" id="snake-start" type="button" data-i18n="gameStart">Start</button>
-            <span data-i18n="snakeControls">Gebruik pijltjestoetsen of WASD.</span>
-          </div>
-        </article>
-
-        <article class="game-card dino-game">
-          <div class="game-topline">
-            <p class="tag">Dino Run</p>
-            <strong>Score: <span id="dino-score">0</span></strong>
-          </div>
-          <h3 data-i18n="gameDinoTitle">Chrome Haalde Hiervoor Het Internet Weg</h3>
-          <canvas id="dino-board" width="520" height="220" aria-label="Playable offline runner game"></canvas>
-          <div class="game-controls">
-            <button class="button card-button" id="dino-start" type="button" data-i18n="gameRun">Ren</button>
-            <span data-i18n="jumpControls">Druk op spatie, omhoog, of tik om te springen.</span>
-          </div>
-        </article>
-
-        <article class="game-card mines-game">
-          <div class="game-topline">
-            <p class="tag">Minesweeper</p>
-            <strong><span data-i18n="minesLabel">Mijnen</span>: <span id="mine-count">10</span></strong>
-          </div>
-          <h3 data-i18n="gameMinesTitle">Experts Klikken Deze Tegels Voorzichtig Aan</h3>
-          <div class="mine-board" id="mine-board" aria-label="Playable minesweeper board"></div>
-          <div class="game-controls">
-            <button class="button card-button" id="mine-reset" type="button" data-i18n="gameReset">Reset</button>
-            <span id="mine-status" data-i18n="mineStatus">Links klikken onthult, rechts klikken markeert.</span>
-          </div>
-        </article>
-
-        <article class="game-card sudoku-game">
-          <div class="game-topline">
-            <p class="tag">Sudoku</p>
-            <strong id="sudoku-status" data-i18n="sudokuReady">Klaar</strong>
-          </div>
-          <h3 data-i18n="gameSudokuTitle">Dit Raster Heeft 1 Logische Truc Die Ze Haten</h3>
-          <div class="sudoku-board" id="sudoku-board" aria-label="Playable sudoku board"></div>
-          <div class="game-controls">
-            <button class="button card-button" id="sudoku-check" type="button" data-i18n="gameCheck">Check</button>
-            <button class="button secondary mini-button" id="sudoku-reset" type="button" data-i18n="gameReset">Reset</button>
-          </div>
-        </article>
-
-        <article class="game-card tetris-game">
-          <div class="game-topline">
-            <p class="tag">Tetris</p>
-            <strong>Score: <span id="tetris-score">0</span></strong>
-          </div>
-          <h3 data-i18n="gameTetrisTitle">Blokken Vallen En Experts Maken Zich Zorgen</h3>
-          <canvas id="tetris-board" width="240" height="480" aria-label="Playable tetris game"></canvas>
-          <div class="game-controls">
-            <button class="button card-button" id="tetris-start" type="button" data-i18n="gameStart">Start</button>
-            <span data-i18n="tetrisControls">Pijltjes bewegen, omhoog draait, spatie laat vallen.</span>
-          </div>
-        </article>
-
-        <article class="game-card flappy-game">
-          <div class="game-topline">
-            <p class="tag">Flappy</p>
-            <strong>Score: <span id="flappy-score">0</span></strong>
-          </div>
-          <h3 data-i18n="gameFlappyTitle">Deze Kleine Vogel Is Nog Steeds Emotioneel Gevaarlijk</h3>
-          <canvas id="flappy-board" width="420" height="300" aria-label="Playable flappy bird style game"></canvas>
-          <div class="game-controls">
-            <button class="button card-button" id="flappy-start" type="button" data-i18n="gameStart">Start</button>
-            <span data-i18n="flappyControls">Druk op spatie, omhoog, of tik om te flappen.</span>
-          </div>
-        </article>
+      <section class="game-preview" id="games" aria-label="Spelletjes preview">
+        <div class="game-preview-copy">
+          <p class="kicker" data-i18n="gamesPreviewKicker">Klikbare klassiekers</p>
+          <h2 data-i18n="gamesPreviewTitle">De arcade heeft een eigen tabblad gekregen</h2>
+          <p data-i18n="gamesPreviewCopy">
+            Snake, Dino Run, Minesweeper, Sudoku, Tetris en Flappy staan nu op
+            hun eigen pagina. Deze preview brengt je naar de volledige spelletjeshal.
+          </p>
+          <a class="button primary" href="games.html" data-i18n="gamesPreviewButton">Open de spelletjes</a>
+        </div>
+        <a class="game-preview-screen" href="games.html" aria-label="Open de spelletjespagina">
+          <span class="preview-browser" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </span>
+          <span class="preview-grid" aria-hidden="true">
+            <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+            <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+            <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+            <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+          </span>
+          <span class="preview-label" data-i18n="gamesPreviewLabel">PLAY</span>
+        </a>
       </section>
 
       <section class="final-cta" aria-label="Sign up call to action">

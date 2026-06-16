@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sudoku | Lustrum VIII Arcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="game-page">
+    <div class="scanlines" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="brand-mark">VIII</span><span><strong>AEGEE-Enschede</strong><small>Arcade</small></span></a>
+      <nav aria-label="Main navigation"><a href="games.html" data-i18n="navGames">Spelletjes</a><a href="index.html#activities" data-i18n="navProgramme">Programma</a><details class="settings-menu"><summary data-i18n="navSettings">Instellingen</summary><div class="settings-panel"><div class="language-switch" aria-label="Language"><button class="language-option" type="button" data-lang="nl">NL</button><button class="language-option" type="button" data-lang="en">EN</button></div><button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false"><span class="toggle-icon" aria-hidden="true"></span><span class="toggle-label">Donker</span></button></div></details></nav>
+    </header>
+    <main class="game-page-shell">
+      <a class="back-link" href="games.html" data-i18n="backToGames">Terug naar spelletjes</a>
+      <article class="game-card single-game sudoku-game">
+        <div class="game-topline"><p class="tag">Sudoku</p><strong id="sudoku-status" data-i18n="sudokuReady">Klaar</strong></div>
+        <h1 data-i18n="gameSudokuTitle">Dit Raster Heeft 1 Logische Truc Die Ze Haten</h1>
+        <div class="sudoku-board" id="sudoku-board" aria-label="Playable sudoku board"></div>
+        <div class="game-controls"><button class="button card-button" id="sudoku-check" type="button" data-i18n="gameCheck">Check</button><button class="button secondary mini-button" id="sudoku-reset" type="button" data-i18n="gameReset">Reset</button></div>
+      </article>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
